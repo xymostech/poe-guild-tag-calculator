@@ -1,0 +1,130 @@
+body {
+  background-color: #0f0f0f;
+  margin: 0;
+  font-family: Fontin;
+}
+
+a {
+  color: #f2c462;
+}
+
+@supports (-webkit-background-clip: text) {
+  .shine {
+    background: radial-gradient(circle at top, #dfcf99 0%, #dfcf99 43%, #fff 50%, #dfcf99 55%, #dfcf99);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 20s linear infinite;
+    background-size: 400% 100%;
+  }
+}
+
+@supports (background-clip: text) {
+  .shine {
+    background: radial-gradient(circle at top, #dfcf99 0%, #dfcf99 43%, #fff 50%, #dfcf99 55%, #dfcf99);
+    background-clip: text;
+    color: transparent;
+    animation: shine 20s linear infinite;
+    background-size: 400% 100%;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: -270%;
+  }
+  45% {
+    background-position: -270%;
+  }
+  50% {
+    background-position: -340%;
+  }
+  100% {
+    background-position: -340%;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+select {
+  width: 40px;
+  height: 40px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #090909;
+  color: #f2c462;
+  font-size: 20px;
+  text-align: center !important;
+  text-align-last: center !important;
+  font-family: Fontin;
+  border: 1px solid #383838;
+  padding: 5px;
+  border-radius: 0;
+}
+
+select:nth-child(n+2) {
+  border-left: 0px;
+}
+
+select:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+select:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+option {
+  background-color: #090909;
+  color: #f2c462;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.outputs {
+  margin-top: 20px;
+}
+
+.output {
+  color: #f2c462;
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+h1 {
+  color: #dfcf99;
+  text-shadow: rgba(244, 244, 244, 0.2) 1px 1px 2px;
+  font-family: FontinSmallCaps
+}
+
+h2 {
+  color: rgb(163, 141, 109);
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+footer {
+  margin-top: 40px;
+  color: rgb(163, 141, 109);
+  text-align: center;
+}
+
+@font-face {
+  font-family: Fontin;
+  src: url(/static/Fontin-Regular.ttf);
+}
+
+@font-face {
+  font-family: FontinSmallCaps;
+  src: url(/static/Fontin-SmallCaps.ttf);
+}
